@@ -4,9 +4,6 @@ buildscript {
         jcenter()
         mavenCentral()
     }
-    dependencies {
-        classpath("net.minecraftforge.gradle:ForgeGradle:4.0.23")
-    }
 }
 
 plugins {
@@ -14,15 +11,6 @@ plugins {
 }
     
     archiveFileName.set("Toffium-forge-1.16.5.jar")
-}
-
-tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
-
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
 }
 
 minecraft {
@@ -62,7 +50,7 @@ minecraft {
 }
 
     dependencies {
-    minecraft("net.minecraftforge:forge:1.16.4-35.1.37")
+    implementation("net.minecraftforge:forge:1.16.4-35.1.37")
     }
         
 apply(from = "mcreator.gradle")
